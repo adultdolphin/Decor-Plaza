@@ -1,0 +1,53 @@
+2015-10-27 11:16:45 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 11:21:12 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 11:23:59 - PHP Notice:  Indirect modification of overloaded property ControllerCheckoutSuccess::$data has no effect in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 11:23:59 - PHP Notice:  Undefined variable: text_message in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/view/theme/default/template/common/success.tpl on line 18
+2015-10-27 11:24:04 - PHP Notice:  Indirect modification of overloaded property ControllerCheckoutSuccess::$data has no effect in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 11:24:04 - PHP Notice:  Undefined variable: text_message in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/view/theme/default/template/common/success.tpl on line 18
+2015-10-27 11:24:14 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 11:27:21 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 12:15:02 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 12:21:08 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 12:21:11 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 12:22:02 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/checkout/success.php on line 72
+2015-10-27 12:23:03 - PHP Notice:  Undefined variable: text_message in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/view/theme/default/template/common/success.tpl on line 18
+2015-10-27 12:25:11 - PHP Notice:  Undefined variable: text_message in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/view/theme/default/template/common/success.tpl on line 18
+2015-10-27 12:25:30 - PHP Notice:  Undefined variable: text_message in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/view/theme/default/template/common/success.tpl on line 18
+2015-10-27 12:26:14 - PHP Notice:  Use of undefined constant php - assumed 'php' in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/view/theme/default/template/common/success.tpl on line 18
+2015-10-27 12:28:45 - PHP Warning:  sprintf() [<a href='function.sprintf'>function.sprintf</a>]: Too few arguments in /var/www/developer/data/www/t-leader.ru/alex/demo2101/catalog/controller/account/success.php on line 32
+2016-08-09 12:25:34 - PHP Notice:  Undefined variable: text_contact in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 43
+2016-08-16 15:27:28 - PHP Notice:  Undefined variable: product in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:34:42 - PHP Notice:  Undefined variable: product in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:35:23 - PHP Notice:  Undefined variable: product in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:36:54 - PHP Notice:  Undefined variable: product in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:37:32 - PHP Notice:  Use of undefined constant undefined - assumed 'undefined' in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:37:32 - PHP Notice:  Undefined variable: product in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:40:02 - PHP Notice:  Undefined variable: products in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:40:12 - PHP Notice:  Undefined variable: products in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:42:12 - PHP Notice:  Undefined variable: products in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:42:20 - PHP Notice:  Undefined variable: products in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:45:39 - PHP Notice:  Undefined property: Loader::$cart in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:45:42 - PHP Notice:  Undefined property: Loader::$cart in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:46:24 - PHP Notice:  Undefined property: Loader::$cart in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-16 15:49:53 - PHP Notice:  Undefined property: Loader::$cart in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 69
+2016-08-18 13:28:37 - PHP Warning:  fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to :25 (Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+) in Z:\home\wallpapers\www\system\library\mail.php on line 170
+2016-08-18 13:28:37 - PHP Notice:  Error: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+ (10061) in Z:\home\wallpapers\www\system\library\mail.php on line 173
+2016-08-18 13:30:27 - PHP Warning:  fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to :25 (Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+) in Z:\home\wallpapers\www\system\library\mail.php on line 170
+2016-08-18 13:30:27 - PHP Notice:  Error: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+ (10061) in Z:\home\wallpapers\www\system\library\mail.php on line 173
+2016-08-18 13:32:02 - PHP Warning:  fsockopen() [<a href='function.fsockopen'>function.fsockopen</a>]: unable to connect to :25 (Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+) in Z:\home\wallpapers\www\system\library\mail.php on line 170
+2016-08-18 13:32:02 - PHP Notice:  Error: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+ (10061) in Z:\home\wallpapers\www\system\library\mail.php on line 173
+2016-08-18 14:59:01 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 14:59:09 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 14:59:35 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 15:00:12 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 15:00:24 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 15:00:29 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 15:00:31 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 15:00:33 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
+2016-08-18 15:00:38 - PHP Notice:  Undefined variable: informations in Z:\home\wallpapers\www\catalog\view\theme\default\template\common\header.tpl on line 58
