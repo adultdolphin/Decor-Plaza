@@ -269,6 +269,8 @@ class ControllerDesignBanner extends Controller {
 
 		$data['entry_name'] = $this->language->get('entry_name');
 		$data['entry_title'] = $this->language->get('entry_title');
+		$data['entry_second_title'] = $this->language->get('entry_second_title');
+		$data['entry_third_title'] = $this->language->get('entry_third_title');
 		$data['entry_link'] = $this->language->get('entry_link');
 		$data['entry_image'] = $this->language->get('entry_image');
 		$data['entry_status'] = $this->language->get('entry_status');
@@ -408,7 +410,9 @@ class ControllerDesignBanner extends Controller {
 		if (isset($this->request->post['banner_image'])) {
 			foreach ($this->request->post['banner_image'] as $banner_image_id => $banner_image) {
 				foreach ($banner_image['banner_image_description'] as $language_id => $banner_image_description) {
-					if ((utf8_strlen($banner_image_description['title']) < 2) || (utf8_strlen($banner_image_description['title']) > 64)) {
+					if ((utf8_strlen($banner_image_description['title']) < 2) || (utf8_strlen($banner_image_description['title']) > 64)
+					&& ((utf8_strlen($banner_image_description['second_title']) < 2) || (utf8_strlen($banner_image_description['second_title']) > 64))
+						&& ((utf8_strlen($banner_image_description['third_title']) < 2) || (utf8_strlen($banner_image_description['third_title']) > 64))) {
 						$this->error['banner_image'][$banner_image_id][$language_id] = $this->language->get('error_title');
 					}
 				}

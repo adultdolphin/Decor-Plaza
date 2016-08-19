@@ -8,6 +8,7 @@ class ControllerProductManufacturer extends Controller {
 		$this->load->model('tool/image');
 
 		$this->document->setTitle($this->language->get('heading_title'));
+		$this->document->addStyle('catalog/view/theme/default/stylesheet/manufacturer.css');
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
@@ -33,6 +34,7 @@ class ControllerProductManufacturer extends Controller {
 		$results = $this->model_catalog_manufacturer->getManufacturers();
 
 		foreach ($results as $result) {
+
 			if (is_numeric(utf8_substr($result['name'], 0, 1))) {
 				$key = '0 - 9';
 			} else {
@@ -44,8 +46,9 @@ class ControllerProductManufacturer extends Controller {
 			}
 
 			$data['categories'][$key]['manufacturer'][] = array(
-				'name' => $result['name'],
-				'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $result['manufacturer_id'])
+				'name'  => $result['name'],
+				'thumb' => $this->model_tool_image->resize($result['image'], 0, 0),
+				'href'  => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $result['manufacturer_id'])
 			);
 		}
 

@@ -1,10 +1,11 @@
 body {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
+	font-family: 'OpenSans';
 	color: #666;
 	font-size: 12px;
 	line-height: 20px;
 	width: 100%;
+	background-color: #f4f4f4;
+	position: relative;
 }
 h1, h2, h3, h4, h5, h6 {
 	color: #444;
@@ -18,10 +19,21 @@ h1 {
 	font-size: 33px;
 }
 h2 {
-	font-size: 27px;
+	color: #c49849;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 18px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
+
 h3 {
-	font-size: 21px;
+	color: #1b1b1b;
+	font-family: "BodoniItalic";
+	font-style: italic;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 9px;
 }
 h4 {
 	font-size: 15px;
@@ -86,8 +98,8 @@ div.required .control-label:before {
 #top {
 	background-color: rgb(27, 27, 27);
 	border-bottom: 1px solid #e2e2e2;
-	padding: 0;
-	margin: 0;
+	padding: 0px 0px 0px 0;
+	margin: 0 0 20px 0;
 	min-height: 40px;
 }
 #top .container {

@@ -52,6 +52,8 @@
             <thead>
               <tr>
                 <td class="text-left"><?php echo $entry_title; ?></td>
+                <td class="text-left"><?php echo $entry_second_title; ?></td>
+                <td class="text-left"><?php echo $entry_third_title; ?></td>
                 <td class="text-left"><?php echo $entry_link; ?></td>
                 <td class="text-left"><?php echo $entry_image; ?></td>
                 <td class="text-right"><?php echo $entry_sort_order; ?></td>
@@ -65,6 +67,22 @@
                 <td class="text-left"><?php foreach ($languages as $language) { ?>
                   <div class="input-group pull-left"><span class="input-group-addon"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> </span>
                     <input type="text" name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][title]" value="<?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['title'] : ''; ?>" placeholder="<?php echo $entry_title; ?>" class="form-control" />
+                  </div>
+                  <?php if (isset($error_banner_image[$image_row][$language['language_id']])) { ?>
+                  <div class="text-danger"><?php echo $error_banner_image[$image_row][$language['language_id']]; ?></div>
+                  <?php } ?>
+                  <?php } ?></td>
+                <td class="text-left"><?php foreach ($languages as $language) { ?>
+                  <div class="input-group pull-left"><span class="input-group-addon"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> </span>
+                    <input type="text" name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][second_title]" value="<?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['second_title'] : ''; ?>" placeholder="<?php echo $entry_second_title; ?>" class="form-control" />
+                  </div>
+                  <?php if (isset($error_banner_image[$image_row][$language['language_id']])) { ?>
+                  <div class="text-danger"><?php echo $error_banner_image[$image_row][$language['language_id']]; ?></div>
+                  <?php } ?>
+                  <?php } ?></td>
+                <td class="text-left"><?php foreach ($languages as $language) { ?>
+                  <div class="input-group pull-left"><span class="input-group-addon"><img src="view/image/flags/<?php echo $language['image']; ?>" title="<?php echo $language['name']; ?>" /> </span>
+                    <input type="text" name="banner_image[<?php echo $image_row; ?>][banner_image_description][<?php echo $language['language_id']; ?>][third_title]" value="<?php echo isset($banner_image['banner_image_description'][$language['language_id']]) ? $banner_image['banner_image_description'][$language['language_id']]['third_title'] : ''; ?>" placeholder="<?php echo $entry_third_title; ?>" class="form-control" />
                   </div>
                   <?php if (isset($error_banner_image[$image_row][$language['language_id']])) { ?>
                   <div class="text-danger"><?php echo $error_banner_image[$image_row][$language['language_id']]; ?></div>

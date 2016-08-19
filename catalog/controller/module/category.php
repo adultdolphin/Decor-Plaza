@@ -53,11 +53,15 @@ class ControllerModuleCategory extends Controller {
 				'filter_sub_category' => true
 			);
 
+			//$description = "Фотообои, картины, дизайнерские коллекции элитных фотообоев и рельефных панно";
+
 			$data['categories'][] = array(
 				'category_id' => $category['category_id'],
-				'name'        => $category['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+				'name'        => $category['name'],
 				'children'    => $children_data,
-				'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
+				'href'        => $this->url->link('product/category', 'path=' . $category['category_id']),
+				'thumb'		  => $this->model_tool_image->resize($category['image'], 415, 340),
+				'description' => utf8_substr(strip_tags(html_entity_decode($category['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_category_description_length')) . '',
 			);
 		}
 

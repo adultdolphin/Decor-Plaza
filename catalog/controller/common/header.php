@@ -4,9 +4,10 @@ class ControllerCommonHeader extends Controller {
 		// Analytics
 		$this->load->model('extension/extension');
 
-        $data['analytics'] = array();
+		$data['analytics'] = array();
 
 		$analytics = $this->model_extension_extension->getExtensions('analytics');
+		$this->document->addStyle('catalog/view/theme/default/stylesheet/fonts.css');
 
 		foreach ($analytics as $analytic) {
 			if ($this->config->get($analytic['code'] . '_status')) {

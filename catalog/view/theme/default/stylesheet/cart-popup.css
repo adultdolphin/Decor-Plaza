@@ -1,0 +1,195 @@
+.modal{
+
+}
+
+.modal-content{
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+
+}
+
+.modal-title{
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.modal-header, .modal-footer{
+    border: none;
+}
+
+.modal-dialog{
+    position: relative;
+    display: table;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: auto;
+    min-width: 300px;
+}
+
+.modal-img{
+    width: 55px;
+    height: 55px;
+}
+
+.btn-plus, .btn-minus, .btn-delete{
+    background: none;
+    border: 1px solid #c49849;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 12px 0px;
+}
+
+.btn-plus span, .btn-minus span, .btn-delete span{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 0px;
+    padding: 0;
+    color: #c49849;
+}
+
+.btn-plus{
+    float: right;
+}
+
+.btn-minus{
+    float: left;
+}
+
+.btn-plus:hover, .btn-minus:hover, .btn-delete:hover{
+    background: #c49849;
+}
+
+.btn-plus:hover span, .btn-minus:hover span, .btn-delete:hover span{
+    color: white;
+}
+
+/* ??? */
+.btn-plus:focus, .btn-minus:focus, .btn-delete:focus{
+    color: white;
+}
+
+
+.btn-modal-close, .btn-modal-buy{
+    width: 261px;
+    height: 50px;
+    border: 2px solid;
+    border-radius: 25px;
+    background: none;
+}
+
+.btn-modal-close span,
+.btn-modal-buy span{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.btn-modal-close span{
+    color: #c49849;
+}
+
+.btn-modal-close{
+    border-color: #c49849;
+}
+
+.btn-modal-buy span{
+    color: #1b1b1b;
+}
+
+.btn-modal-buy{
+    border-color: #1b1b1b;
+}
+
+.modal .btn:focus{
+    outline: none !important;
+}
+
+.btn-modal-close:hover{
+    background-color: #c49849;
+}
+
+.btn-modal-close:hover span{
+    color: white;
+}
+
+.btn-modal-buy:hover{
+    background-color: #1b1b1b;
+}
+
+.btn-modal-buy:hover span{
+    color: white;
+}
+
+.modal a:link{
+    color: #c49849;
+    text-decoration: underline;
+    text-decoration-color: #c49849;
+}
+
+.modal a:visited{
+    color: #777;
+}
+
+.modal-table>tbody>tr>td, .modal-table>thead>tr>th{
+    border: none;
+}
+
+.modal-table>thead>tr>th{
+    color: #777;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.modal-table>tbody>tr{
+    max-height: 50px;
+    min-height: 50px;
+}
+
+.modal-table .cart-price{
+    color: #c49849;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    white-space: nowrap;
+}
+
+.modal-table .cart-description{
+    min-width: 210px;
+    max-width: 210px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #1b1b1b;
+}
+
+.modal-table .cart-amount{
+    color: #1b1b1b;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: center;
+}
+
+.modal-table .cart-amount .cart-amount-text{
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.modal-table .cart-amount, .modal-table>tbody>tr>td:last-child{
+    padding-top: 0;
+}
+
+.modal-footer{
+    text-align: center;
+}
+
+
+

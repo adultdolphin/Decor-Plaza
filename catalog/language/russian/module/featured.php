@@ -1,6 +1,6 @@
 <?php
 // Heading 
-$_['heading_title'] = 'Рекомендуем';
+$_['heading_title'] = 'Лучшие товары';
 
 // Text
 $_['text_reviews']	= 'Отзывов: %s';

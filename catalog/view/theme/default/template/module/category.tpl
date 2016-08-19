@@ -1,18 +1,31 @@
-<div class="list-group">
+<div class="categories">
   <?php foreach ($categories as $category) { ?>
-  <?php if ($category['category_id'] == $category_id) { ?>
-  <a href="<?php echo $category['href']; ?>" class="list-group-item active"><?php echo $category['name']; ?></a>
-  <?php if ($category['children']) { ?>
-  <?php foreach ($category['children'] as $child) { ?>
-  <?php if ($child['category_id'] == $child_id) { ?>
-  <a href="<?php echo $child['href']; ?>" class="list-group-item active">&nbsp;&nbsp;&nbsp;- <?php echo $child['name']; ?></a>
-  <?php } else { ?>
-  <a href="<?php echo $child['href']; ?>" class="list-group-item">&nbsp;&nbsp;&nbsp;- <?php echo $child['name']; ?></a>
-  <?php } ?>
-  <?php } ?>
-  <?php } ?>
-  <?php } else { ?>
-  <a href="<?php echo $category['href']; ?>" class="list-group-item"><?php echo $category['name']; ?></a>
-  <?php } ?>
+  <div class="item">
+    <div class="image">
+      <img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" title="<?php echo $category['name']; ?>" />
+      <div class="image-background"></div>
+    </div>
+    <div class="caption">
+      <div class="catalog-name"><?php echo $category['name']; ?></div>
+      <div class="description"><?php echo $category['description']; ?></div>
+      </div>
+    <div class="button-area">
+      <a class="btn btn-more" href="<?php echo $category['href']; ?>"><span>Подробнее</span></a>
+    </div>
+  </div>
   <?php } ?>
 </div>
+
+<!-- DESCRIPTION
+<div class="text-center shop-title">
+    <h2>Магазин "Декор-плаза"</h2>
+    <div class="divider"></div>
+    <h3>Выгодная покупка отделочных материалов</h3>
+</div>
+
+<div class="shop-description">
+    Продажа отделочных материалов  – одно из основных направлений деятельности нашей компании. Предлагаем широкий ассортимент долговечных покрытий для пола, стен и потолка. У нас можно купить  ламинат , паркет, пробковые, виниловые, кожаные полы, обои, декоративную штукатурку, натяжные потолки и т.д . Также готовы предложить Фотообои с любым изображением из крупнейшего фотобанка Shutterstock. Цена на отделочные материалы в Москве в нашей компании – самая выгодная в регионе. Убедитесь в этом сами, пролистав наш каталог. Ждем Вас!До XVIII века в Европе обои делали из ткани, а не из бумаги, и стены и потолки ими обивали, а не оклеивали, откуда и пошло их название. Слово обои образовано от слова обить.
+    <br><br>В эпоху барокко широкой популярностью пользовались кожаные обои, традиция изготовления которых пришла в Европу из арабского мира через Испанию. Бумажные обои с давних пор традиционно используются в странах Восточной Азии (Китай, Япония). Обои в основном выполняют декоративные функции, попутно закрывая поры и щели в стенах, что способствует чистоте. Так как обоями покрывают всю поверхность стен, их цвет влияет на освещённость помещения.Также обои могут выполнять звукопоглощающие функции, для этого используются ворсистые материалы, задерживающие звук (преимущественно отходы текстильного производства). Такие обои применяются в помещениях, где происходит работа со звуком.
+</div>
+
+-->
