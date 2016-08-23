@@ -1,25 +1,25 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://opencart/admin/');
-define('HTTP_CATALOG', 'http://opencart/');
+define('HTTP_SERVER', 'http://decor-plaza/admin/');
+define('HTTP_CATALOG', 'http://decor-plaza/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://opencart/admin/');
-define('HTTPS_CATALOG', 'http://opencart/');
+define('HTTPS_SERVER', 'http://decor-plaza/admin/');
+define('HTTPS_CATALOG', 'http://decor-plaza/');
 
 // DIR
-define('DIR_APPLICATION', 'C:/OpenServer/domains/opencart/admin/');
-define('DIR_SYSTEM', 'C:/OpenServer/domains/opencart/system/');
-define('DIR_LANGUAGE', 'C:/OpenServer/domains/opencart/admin/language/');
-define('DIR_TEMPLATE', 'C:/OpenServer/domains/opencart/admin/view/template/');
-define('DIR_CONFIG', 'C:/OpenServer/domains/opencart/system/config/');
-define('DIR_IMAGE', 'C:/OpenServer/domains/opencart/image/');
-define('DIR_CACHE', 'C:/OpenServer/domains/opencart/system/storage/cache/');
-define('DIR_DOWNLOAD', 'C:/OpenServer/domains/opencart/system/storage/download/');
-define('DIR_LOGS', 'C:/OpenServer/domains/opencart/system/storage/logs/');
-define('DIR_MODIFICATION', 'C:/OpenServer/domains/opencart/system/storage/modification/');
-define('DIR_UPLOAD', 'C:/OpenServer/domains/opencart/system/storage/upload/');
-define('DIR_CATALOG', 'C:/OpenServer/domains/opencart/catalog/');
+define('DIR_APPLICATION', 'C:/OpenServer/domains/decor-plaza/admin/');
+define('DIR_SYSTEM', 'C:/OpenServer/domains/decor-plaza/system/');
+define('DIR_LANGUAGE', 'C:/OpenServer/domains/decor-plaza/admin/language/');
+define('DIR_TEMPLATE', 'C:/OpenServer/domains/decor-plaza/admin/view/template/');
+define('DIR_CONFIG', 'C:/OpenServer/domains/decor-plaza/system/config/');
+define('DIR_IMAGE', 'C:/OpenServer/domains/decor-plaza/image/');
+define('DIR_CACHE', 'C:/OpenServer/domains/decor-plaza/system/storage/cache/');
+define('DIR_DOWNLOAD', 'C:/OpenServer/domains/decor-plaza/system/storage/download/');
+define('DIR_LOGS', 'C:/OpenServer/domains/decor-plaza/system/storage/logs/');
+define('DIR_MODIFICATION', 'C:/OpenServer/domains/decor-plaza/system/storage/modification/');
+define('DIR_UPLOAD', 'C:/OpenServer/domains/decor-plaza/system/storage/upload/');
+define('DIR_CATALOG', 'C:/OpenServer/domains/decor-plaza/catalog/');
 
 // DB
 define('DB_DRIVER', 'mysqli');

@@ -125,8 +125,6 @@
 	-webkit-box-shadow: none;
 }
 
-
-
 .featured-carousel .owl-buttons div {
 	opacity: 1;
 	transition: all .3s ease;
@@ -188,11 +186,11 @@
 	background-position: center;
 }
 
-.product-thumb{
+.featured-carousel .product-thumb{
 	border: none;
 	background-color: white;
 }
-.product-thumb .image img{
+.featured-carousel .product-thumb .image img{
 	height: 211px;
 	width: 210px;
 }
@@ -202,11 +200,11 @@
 	text-decoration: none;
 }
 
-.product-thumb .caption {
+.featured-carousel .product-thumb .caption {
 	min-height: 200px;
 }
 
-.product-thumb .description {
+.featured-carousel .product-thumb .description {
 	width: auto;
 	color: #1b1b1b;
 	font-size: 14px;
@@ -214,7 +212,7 @@
 	line-height: 20px;
 }
 
-.product-thumb .description {
+.featured-carousel .product-thumb .description {
 	overflow: hidden;
 	position: relative;
 	max-height: 58px;
@@ -223,14 +221,14 @@
 	padding-right: 1em;
 }
 
-.product-thumb .description:before {
+.featured-carousel .product-thumb .description:before {
 	content: '...';
 	position: absolute;
 	right: 0;
 	bottom: -2px;
 }
 
-.product-thumb .description:after {
+.featured-carousel .product-thumb .description:after {
 	content: '';
 	position: absolute;
 	right: 0;
@@ -241,11 +239,11 @@
 }
 
 
-.product-thumb .caption{
+.featured-carousel .product-thumb .caption{
 	margin-top: 16px;
 }
 
-.product-thumb .price{
+.featured-carousel .product-thumb .price{
 	position:absolute;
 	bottom: 5px;
 }
@@ -295,12 +293,12 @@
 }
 
 
-.product-layout{
+.featured-carousel .product-layout{
 	height: 330px;
 }
 
 
-.product-thumb .image a:hover{
+.featured-carousel .product-thumb .image a:hover{
 	opacity: 1;
 
 }

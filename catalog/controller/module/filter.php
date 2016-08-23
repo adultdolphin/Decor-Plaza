@@ -1,6 +1,9 @@
 <?php
 class ControllerModuleFilter extends Controller {
 	public function index() {
+
+		$this->document->addStyle('catalog/view/theme/default/stylesheet/filter.css');
+
 		if (isset($this->request->get['path'])) {
 			$parts = explode('_', (string)$this->request->get['path']);
 		} else {
@@ -12,6 +15,7 @@ class ControllerModuleFilter extends Controller {
 		$this->load->model('catalog/category');
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
+		
 
 		if ($category_info) {
 			$this->load->language('module/filter');
@@ -48,6 +52,8 @@ class ControllerModuleFilter extends Controller {
 
 			$filter_groups = $this->model_catalog_category->getCategoryFilters($category_id);
 
+			//var_dump($filter_groups); die();
+
 			if ($filter_groups) {
 				foreach ($filter_groups as $filter_group) {
 					$childen_data = array();
@@ -60,7 +66,7 @@ class ControllerModuleFilter extends Controller {
 
 						$childen_data[] = array(
 							'filter_id' => $filter['filter_id'],
-							'name'      => $filter['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : '')
+							'name'      => $filter['name']
 						);
 					}
 
@@ -70,6 +76,7 @@ class ControllerModuleFilter extends Controller {
 						'filter'          => $childen_data
 					);
 				}
+
 
 				if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/filter.tpl')) {
 					return $this->load->view($this->config->get('config_template') . '/template/module/filter.tpl', $data);

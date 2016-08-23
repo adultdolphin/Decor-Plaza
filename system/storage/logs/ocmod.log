@@ -1,0 +1,41 @@
+2016-08-21 13:33:37 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 39
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 20
+LINE: 59
+LINE: 80
+LINE: 99
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 25
+LINE: 31
+----------------------------------------------------------------
+MOD: Local copy OCMOD by iSenseLabs
+FILE: admin/controller/extension/installer.php
+CODE: 'url'  => str_replace('&amp;', '&', $this->url->link('extension/installer/ftp', 'token=' . $this->session->data['token'],
+LINE: 132
+CODE: public function unzip() {
+LINE: 293
+----------------------------------------------------------------
+MOD: Opencart News 2.x
+FILE: admin/controller/common/menu.php
+CODE: $data['text_manufacturer'] = $this->language->get('text_manufacturer');
+LINE: 46
+CODE: $data['manufacturer'] = $this->url->link('catalog/manufacturer', 'token=' . $this->session->data['token'], 'SSL');
+LINE: 141
+FILE: admin/language/russian/common/menu.php
+CODE: $_['text_manufacturer']
+NOT FOUND!
+FILE: admin/language/english/common/menu.php
+CODE: $_['text_manufacturer']
+LINE: 37
+FILE: admin/view/template/common/menu.tpl
+CODE: <li><a href="<?php echo $information; ?>"><?php echo $text_information; ?></a></li>
+LINE: 19
+----------------------------------------------------------------

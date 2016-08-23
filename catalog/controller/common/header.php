@@ -9,6 +9,7 @@ class ControllerCommonHeader extends Controller {
 		$analytics = $this->model_extension_extension->getExtensions('analytics');
 		$this->document->addStyle('catalog/view/theme/default/stylesheet/fonts.css');
 
+
 		foreach ($analytics as $analytic) {
 			if ($this->config->get($analytic['code'] . '_status')) {
 				$data['analytics'][] = $this->load->controller('analytics/' . $analytic['code']);

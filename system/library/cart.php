@@ -327,6 +327,7 @@ class Cart {
 		return $total;
 	}
 
+
 	public function getTaxes() {
 		$tax_data = array();
 
@@ -367,6 +368,16 @@ class Cart {
 		}
 
 		return $product_total;
+	}
+
+	public function getQuantity($product_id) {
+		$total = 0;
+
+		foreach ($this->getProducts() as $product) {
+			$total += $product['total'];
+		}
+
+		return $total;
 	}
 
 	public function hasProducts() {

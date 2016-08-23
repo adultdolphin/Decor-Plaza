@@ -2,6 +2,11 @@ h3{
     text-align: center;
 }
 
+.container {
+    width: 1220px;
+
+}
+
 .alphabet{
     font-weight: 600;
     line-height: 24px;

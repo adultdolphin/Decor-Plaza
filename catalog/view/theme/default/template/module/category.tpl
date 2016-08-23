@@ -1,31 +1,36 @@
-<div class="categories">
-  <?php foreach ($categories as $category) { ?>
-  <div class="item">
-    <div class="image">
-      <img src="<?php echo $category['thumb']; ?>" alt="<?php echo $category['name']; ?>" title="<?php echo $category['name']; ?>" />
-      <div class="image-background"></div>
+<div class="panel-group category-panel">
+
+    <?php foreach ($categories as $category) { ?>
+    <?php if ($category['children']) { ?>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+        <a class="category-link" data-toggle="collapse" data-target="#collapse<?php echo $category['category_id']; ?>"><?php echo $category['name']; ?></a>
     </div>
-    <div class="caption">
-      <div class="catalog-name"><?php echo $category['name']; ?></div>
-      <div class="description"><?php echo $category['description']; ?></div>
-      </div>
-    <div class="button-area">
-      <a class="btn btn-more" href="<?php echo $category['href']; ?>"><span>Подробнее</span></a>
+      <div id="collapse<?php echo $category['category_id']; ?>" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <ul class="box-category-children">
+        <?php foreach ($category['children'] as $child) { ?>
+        <?php if ($child['category_id'] == $child_id) { ?>
+            <li class="active">
+              <a href="<?php echo $child['href']; ?>" class="active"><?php echo $child['name']; ?></a>
+              <?php } else { ?>
+            <li>
+               <a href="<?php echo $child['href']; ?>"><?php echo $child['name']; ?></a>
+               <?php } ?>
+            </li>
+            <?php } ?>
+          </ul>
+          </div>
     </div>
   </div>
-  <?php } ?>
-</div>
+    <?php } else { ?>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="<?php echo $category['href']; ?>"><?php echo $category['name']; ?></a>
+    </div>
+    </div>
+    <?php } ?>
 
-<!-- DESCRIPTION
-<div class="text-center shop-title">
-    <h2>Магазин "Декор-плаза"</h2>
-    <div class="divider"></div>
-    <h3>Выгодная покупка отделочных материалов</h3>
-</div>
+      <?php } ?>
 
-<div class="shop-description">
-    Продажа отделочных материалов  – одно из основных направлений деятельности нашей компании. Предлагаем широкий ассортимент долговечных покрытий для пола, стен и потолка. У нас можно купить  ламинат , паркет, пробковые, виниловые, кожаные полы, обои, декоративную штукатурку, натяжные потолки и т.д . Также готовы предложить Фотообои с любым изображением из крупнейшего фотобанка Shutterstock. Цена на отделочные материалы в Москве в нашей компании – самая выгодная в регионе. Убедитесь в этом сами, пролистав наш каталог. Ждем Вас!До XVIII века в Европе обои делали из ткани, а не из бумаги, и стены и потолки ими обивали, а не оклеивали, откуда и пошло их название. Слово обои образовано от слова обить.
-    <br><br>В эпоху барокко широкой популярностью пользовались кожаные обои, традиция изготовления которых пришла в Европу из арабского мира через Испанию. Бумажные обои с давних пор традиционно используются в странах Восточной Азии (Китай, Япония). Обои в основном выполняют декоративные функции, попутно закрывая поры и щели в стенах, что способствует чистоте. Так как обоями покрывают всю поверхность стен, их цвет влияет на освещённость помещения.Также обои могут выполнять звукопоглощающие функции, для этого используются ворсистые материалы, задерживающие звук (преимущественно отходы текстильного производства). Такие обои применяются в помещениях, где происходит работа со звуком.
 </div>
-
--->

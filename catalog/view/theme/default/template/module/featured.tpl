@@ -127,11 +127,6 @@
             $(this).find('.featured-icon').css({'display' : 'block'});
             $(this).find('.sku').css({'display' : 'block'});
             $(this).find('.rating').css({'display' : 'block'});
-
-
-
-
-
           },
           function (){
             $(this).find('img').removeClass('image-hover');
