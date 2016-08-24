@@ -50,6 +50,7 @@ class ControllerCommonCart extends Controller {
 
 		$this->load->model('tool/image');
 		$this->load->model('tool/upload');
+		//$data['action'] = $this->url->link('checkout/cart_popup/edit', '', true);
 
 		$data['products'] = array();
 

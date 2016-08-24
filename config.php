@@ -1,28 +1,28 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://wallpapers/');
+define('HTTP_SERVER', 'http://decor-plaza/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://wallpapers/');
+define('HTTPS_SERVER', 'http://decor-plaza/');
 
 // DIR
-define('DIR_APPLICATION', 'Z:/home/wallpapers/www/catalog/');
-define('DIR_SYSTEM', 'Z:/home/wallpapers/www/system/');
-define('DIR_LANGUAGE', 'Z:/home/wallpapers/www/catalog/language/');
-define('DIR_TEMPLATE', 'Z:/home/wallpapers/www/catalog/view/theme/');
-define('DIR_CONFIG', 'Z:/home/wallpapers/www/system/config/');
-define('DIR_IMAGE', 'Z:/home/wallpapers/www/image/');
-define('DIR_CACHE', 'Z:/home/wallpapers/www/system/storage/cache/');
-define('DIR_DOWNLOAD', 'Z:/home/wallpapers/www/system/storage/download/');
-define('DIR_LOGS', 'Z:/home/wallpapers/www/system/storage/logs/');
-define('DIR_MODIFICATION', 'Z:/home/wallpapers/www/system/storage/modification/');
-define('DIR_UPLOAD', 'Z:/home/wallpapers/www/system/storage/upload/');
+define('DIR_APPLICATION', 'C:/OpenServer/domains/decor-plaza/catalog/');
+define('DIR_SYSTEM', 'C:/OpenServer/domains/decor-plaza/system/');
+define('DIR_LANGUAGE', 'C:/OpenServer/domains/decor-plaza/catalog/language/');
+define('DIR_TEMPLATE', 'C:/OpenServer/domains/decor-plaza/catalog/view/theme/');
+define('DIR_CONFIG', 'C:/OpenServer/domains/decor-plaza/system/config/');
+define('DIR_IMAGE', 'C:/OpenServer/domains/decor-plaza/image/');
+define('DIR_CACHE', 'C:/OpenServer/domains/decor-plaza/system/storage/cache/');
+define('DIR_DOWNLOAD', 'C:/OpenServer/domains/decor-plaza/system/storage/download/');
+define('DIR_LOGS', 'C:/OpenServer/domains/decor-plaza/system/storage/logs/');
+define('DIR_MODIFICATION', 'C:/OpenServer/domains/decor-plaza/system/storage/modification/');
+define('DIR_UPLOAD', 'C:/OpenServer/domains/decor-plaza/system/storage/upload/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
 define('DB_HOSTNAME', 'localhost');
-define('DB_USERNAME', 'WpDb');
-define('DB_PASSWORD', '132435');
-define('DB_DATABASE', 'WpDb');
+define('DB_USERNAME', 'opencartdb');
+define('DB_PASSWORD', 'Ex53WEDuyD98WzoR');
+define('DB_DATABASE', 'opencartdb');
 define('DB_PORT', '3306');
 define('DB_PREFIX', 'oc_');

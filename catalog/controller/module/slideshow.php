@@ -7,7 +7,9 @@ class ControllerModuleSlideshow extends Controller {
 		$this->load->model('tool/image');
 
 		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+		$this->document->addStyle('catalog/view/theme/default/stylesheet/main.css');
 		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+		$this->document->addScript('catalog/view/javascript/liCover.js');
 
 		$data['banners'] = array();
 
@@ -17,7 +19,10 @@ class ControllerModuleSlideshow extends Controller {
 			if (is_file(DIR_IMAGE . $result['image'])) {
 				$data['banners'][] = array(
 					'title' => $result['title'],
+					'second_title' => $result['second_title'],
+					'third_title' => $result['third_title'],
 					'link'  => $result['link'],
+					//'image' => $result['image'],
 					'image' => $this->model_tool_image->resize($result['image'], $setting['width'], $setting['height'])
 				);
 			}

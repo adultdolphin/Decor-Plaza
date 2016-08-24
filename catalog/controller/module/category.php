@@ -4,6 +4,7 @@ class ControllerModuleCategory extends Controller {
 		$this->load->language('module/category');
 
 		$data['heading_title'] = $this->language->get('heading_title');
+		$this->document->addStyle('catalog/view/theme/default/stylesheet/category-list.css');
 
 		if (isset($this->request->get['path'])) {
 			$parts = explode('_', (string)$this->request->get['path']);
@@ -27,14 +28,14 @@ class ControllerModuleCategory extends Controller {
 
 		$this->load->model('catalog/product');
 
-		$data['categories'] = array();
+		//$data['categories'] = array();
 
 		$categories = $this->model_catalog_category->getCategories(0);
 
 		foreach ($categories as $category) {
 			$children_data = array();
 
-			if ($category['category_id'] == $data['category_id']) {
+			//if ($category['category_id'] == $data['category_id']) {
 				$children = $this->model_catalog_category->getCategories($category['category_id']);
 
 				foreach($children as $child) {
@@ -42,10 +43,10 @@ class ControllerModuleCategory extends Controller {
 
 					$children_data[] = array(
 						'category_id' => $child['category_id'],
-						'name' => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+						'name' => $child['name'],
 						'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
 					);
-				}
+				//}
 			}
 
 			$filter_data = array(
@@ -53,11 +54,15 @@ class ControllerModuleCategory extends Controller {
 				'filter_sub_category' => true
 			);
 
+			//$description = "Фотообои, картины, дизайнерские коллекции элитных фотообоев и рельефных панно";
+
 			$data['categories'][] = array(
 				'category_id' => $category['category_id'],
-				'name'        => $category['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
+				'name'        => $category['name'],
 				'children'    => $children_data,
-				'href'        => $this->url->link('product/category', 'path=' . $category['category_id'])
+				'href'        => $this->url->link('product/category', 'path=' . $category['category_id']),
+				'thumb'		  => $this->model_tool_image->resize($category['image'], 415, 340),
+				'description' => utf8_substr(strip_tags(html_entity_decode($category['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_category_description_length')) . '',
 			);
 		}
 

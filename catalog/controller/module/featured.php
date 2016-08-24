@@ -1,6 +1,7 @@
 <?php
 class ControllerModuleFeatured extends Controller {
 	public function index($setting) {
+		$module = 0;
 		$this->load->language('module/featured');
 
 		$data['heading_title'] = $this->language->get('heading_title');
@@ -11,14 +12,20 @@ class ControllerModuleFeatured extends Controller {
 		$data['button_wishlist'] = $this->language->get('button_wishlist');
 		$data['button_compare'] = $this->language->get('button_compare');
 
+		$data['cart'] = $this->load->controller('common/cart_popup');
+
 		$this->load->model('catalog/product');
 
 		$this->load->model('tool/image');
 
+		$this->document->addStyle('catalog/view/javascript/jquery/owl-carousel/owl.carousel.css');
+		$this->document->addScript('catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js');
+		$this->document->addStyle('catalog/view/theme/default/stylesheet/cart-popup.css');
+
 		$data['products'] = array();
 
 		if (!$setting['limit']) {
-			$setting['limit'] = 4;
+			$setting['limit'] = 12;
 		}
 
 		if (!empty($setting['product'])) {
@@ -58,20 +65,35 @@ class ControllerModuleFeatured extends Controller {
 						$rating = false;
 					}
 
+					if (($this->config->get('config_customer_price') && $this->customer->isLogged()) || !$this->config->get('config_customer_price')) {
+						$price = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')));
+					} else {
+						$price = false;
+					}
+
+
+					//$sku = 231;
+					//$rating = 4;
+
+
 					$data['products'][] = array(
 						'product_id'  => $product_info['product_id'],
 						'thumb'       => $image,
 						'name'        => $product_info['name'],
-						'description' => utf8_substr(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
+						'description' => utf8_substr(strip_tags(html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '...',
+						'sku'		  => $product_info['sku'],
 						'price'       => $price,
 						'special'     => $special,
 						'tax'         => $tax,
-						'rating'      => $rating,
+						'rating'      => $product_info['rating'],
+						'quantity'    => $product_info['quantity'],
 						'href'        => $this->url->link('product/product', 'product_id=' . $product_info['product_id'])
 					);
 				}
 			}
 		}
+
+		$data['module'] = $module++;
 
 		if ($data['products']) {
 			if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/module/featured.tpl')) {

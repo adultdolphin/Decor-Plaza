@@ -1,0 +1,125 @@
+h3{
+    text-align: center;
+}
+
+.container {
+    width: 1220px;
+
+}
+
+.alphabet{
+    font-weight: 600;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #777;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+.alphabet a:link, .alphabet a:visited{
+    color: #777;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+.alphabet a:hover{
+
+    background-color: #c49849;
+    color: white !important;
+    border-radius: 50%;
+}
+
+.category-name{
+    color: #1b1b1b;
+    font-family: BodoniItalic;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+.category-divider{
+    height: 1px;
+    border: 1px solid #1b1b1b;
+    width: 100%;
+}
+
+.category-image{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+.category-aria{
+    text-align: center;
+    width: 100px;
+}
+
+.category-aria a:link, .category-aria a:visited{
+    color: #777;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-aria a:hover img{
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+}
+
+.category-aria a:hover{
+    color: #1b1b1b !important;
+}
+
+.category-col{
+    margin-top: 25px;
+}
+
+
+.category-row .category-col:nth-child(6n-5){
+    clear: both;
+}
+
+
+.shop-title{
+    margin-top: 40px;
+}
+
+.shop-title h3{
+    width: 415px;
+    margin: auto;
+    line-height: normal;
+}
+
+.shop-description {
+    margin: 55px auto;
+    text-align: justify;
+    width: 1150px;
+
+    -webkit-column-width: auto;
+    -moz-column-width: auto;
+    column-width: auto;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+
+.divider{
+    width: 94px;
+    height: 1px;
+    border: 1px solid #1b1b1b;
+    margin: 25px auto;
+}
+
