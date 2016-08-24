@@ -554,12 +554,21 @@ function callBackSend(){
    if ($("#callBackInput").val()=='')
    	alert("Заявка отклонена: введите телефон");
 	else {
-	   var link = "mailto:me@example.com"
-			   + "?cc=myCCaddress@example.com"
-			   + "&subject=" + escape("This is my subject")
-			   + "&body=" + escape(document.getElementById('myText').value)
-		   ;
-
-	   window.location.href = link;
+	   alert("Заявка принята, ожидайте звонка");
    }
+}
+
+var initmap = function() {
+	var myLatlng = new google.maps.LatLng(55.752387, 37.8879194);
+	var myOptions = {
+		zoom: 16,
+		center: myLatlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+	var marker = new google.maps.Marker({
+		position: myLatlng,
+		map: map,
+		title:"Decor Plaza"
+	});
 }

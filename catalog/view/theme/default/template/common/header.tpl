@@ -92,9 +92,9 @@
         <img src="/image/catalog/call.png" id="callIcon">
       </div>
       <div class="col-sm-2">
-          <a href="tel:84993977912" class="headerBigText headerText telephoneNumber" id="firstNumber">8(499)397-79-12</a><br/>
-          <a href="tel:89253977912" class="headerText telephoneNumber" id="secondNumber">8(925)397-79-13</a><br/>
-          <a href="tel:89253977914" class="headerText telephoneNumber" id="thirdNumber">8(925)397-79-14</a>
+          <a href="tel:84993977912" class="headerBigText headerText telephoneNumber" id="firstNumber"><?php echo $telephone; ?></a><br/>
+          <a href="tel:89253977912" class="headerText telephoneNumber" id="secondNumber"><?php echo $telephone1; ?></a><br/>
+          <a href="tel:89253977914" class="headerText telephoneNumber" id="thirdNumber"><?php echo $telephone2; ?></a>
       </div>
       <div class="col-sm-1">
           <img src="/image/catalog/callBack.png">
@@ -109,7 +109,7 @@
             <img src="/image/catalog/location.png">
         </div>
         <div class="col-sm-2">
-            <a href="<?php echo $contact; ?>">
+            <a href="https://maps.google.com/maps?q=<?php echo urlencode($geocode); ?>&hl=<?php echo $geocode_hl; ?>&t=m&z=15" target="_blank">
             <span class="headerBigText">Наш адрес:</span><br/>
             <span class="headerText">г.Москва, м."Новокосино,"</span><br/>
             <span class="headerText">Носовихинское шоссе вл., 4.</span><br/>

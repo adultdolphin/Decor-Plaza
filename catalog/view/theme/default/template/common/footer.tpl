@@ -1,7 +1,7 @@
 <footer>
   <div class="row">
      <div class="container-fluid">
-       <p class="producersSign">Производители</p>
+       <p class="decorPlazaHeaderText">Производители</p>
        <p class="producersList"><?php foreach ($manufacturers as $manufacturer) echo '<a href="/">'.$manufacturer['name'].' </a>';?></p>
        </div>
     </div>

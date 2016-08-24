@@ -779,6 +779,26 @@ h2.price {
     background-color: #df5c39;
 }
 
+/*Decor-Plaza*/
+/*Common*/
+.decorPlazaHeaderText{
+	font-size: 36px;
+	font-family: "BodoniItalic";
+	color: rgb(27, 27, 27);
+	line-height: 1.2;
+	text-align: center;
+	font-style: italic;
+	font-weight: 500;
+}
+
+/*Maybe it should be deleted, I don't know*/
+.information-contact>div{
+	max-width: 1240px;
+	padding: 0;
+}
+body{
+background-color: rgb(244, 244, 244);}
+
 /*Decor-Plaza Navbar*/
 
 .navbar-top-collapse{
@@ -1127,7 +1147,7 @@ h2.price {
 
 #search{
 	position: relative;
-	bottom: 23px;
+	bottom: 29px;
 	padding:0;
 	margin:0;
 	width: 100%;
@@ -1137,13 +1157,6 @@ h2.price {
 	background-color: white;
 	display: inline-block;
 	white-space: nowrap;
-}
-
-#search>input{
-	border-radius: 0;
-	border: 0;
-	height: 60px;
-	width: 90%;
 }
 
 #search>button{
@@ -1162,6 +1175,13 @@ h2.price {
 	border-radius: 0;
 	border: 0;
 	outline: none !important;
+}
+
+#search>input{
+	border-radius: 0;
+	border: 0;
+	height: 60px;
+	width: 90%;
 }
 
 #search>input:focus{
@@ -1196,16 +1216,6 @@ footer>.row:first-child>.container-fluid{
 
 footer .col-sm-2{
 	padding: 0;
-}
-
-.producersSign{
-	font-size: 36px;
-	font-family: "BodoniItalic";
-	color: rgb(27, 27, 27);
-	line-height: 1.2;
-	text-align: center;
-	font-style: italic;
-	font-weight: 500;
 }
 
 .producersList a:link{
@@ -1258,4 +1268,133 @@ footer>.row:nth-child(3)>.container-fluid{
 }
 footer>.row:nth-child(3)>.container-fluid .col-xs-6{
 	padding: 0;
+}
+
+/* CONTACTS */
+
+.contactsIcon{
+	margin-right: 21px;
+}
+
+.spanOriginalSpaces{
+	white-space: pre;
+}
+
+#map_canvas{
+	height: 320px;
+}
+
+.contactHr{
+	border: solid 1px black;
+	width: 100px;
+}
+
+.contactsFieldSet{
+	text-align: center;
+}
+
+.contactsFieldSet>fieldset>span{
+	margin-bottom: 50px;
+}
+
+.contactsFieldSet>.row:nth-child(2){
+	margin-top: 40px;
+	margin-bottom: 15px;
+}
+
+.contactsFieldSet>:not(span){
+	text-align: left;
+}
+
+.contactsFieldSet div{
+	padding: 0;
+}
+
+.contactsFieldSet .col-sm-4:first-child{
+	padding-right: 10px;
+}
+
+.contactsFieldSet .col-sm-8{
+	padding-right: 10px;
+}
+
+.contactsFieldSet>div:nth-child(2)>.col-sm-4:nth-child(2){
+	padding-right: 10px;
+}
+
+.contactsFieldSet .col-sm-4>span{
+	font-size: 12px;
+	font-family: "Open Sans";
+	color: rgb(119, 119, 119);
+	text-transform: uppercase;
+	line-height: 1.833;
+	text-align: justify;
+	font-weight: bold;
+}
+
+.contactsFieldSet .col-sm-8>span{
+	font-size: 12px;
+	font-family: "Open Sans";
+	color: rgb(119, 119, 119);
+	text-transform: uppercase;
+	line-height: 1.833;
+	text-align: justify;
+	font-weight: bold;
+}
+
+.colorRed{
+	color: rgb(149, 16, 16) !important;
+}
+
+.necessaryFields{
+	display: inline-block;
+	text-transform: none !important;
+	margin-left: 52px;
+}
+
+.contactsFieldSet input{
+	border-radius: 0;
+	border: 0;
+	height: 40px;
+	width: 100%;
+}
+
+.contactsFieldSet input:focus{
+	border-radius: 0;
+	border: 0;
+	outline: none !important;
+}
+
+.callBackSend{
+	height: 50px;
+	width: 260px;
+	border: 2px solid #c49849;
+	background-color: rgb(244, 244, 244);
+	border-radius: 25px;
+	color: #c49849;
+	text-align: center !important;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.286;
+}
+
+.callBackSend:focus{
+	outline: none !important;
+}
+
+.col-sm-2.control-label{
+	display: none;
+}
+
+.captchaDiv{
+	height: 40px;
+	white-space: nowrap;
+	width: 100%;
+	overflow: hidden;
+}
+
+.captchaDiv>input{
+	position: relative;
+	right: 3px;
 }

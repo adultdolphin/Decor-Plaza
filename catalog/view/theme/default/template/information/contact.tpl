@@ -1,10 +1,5 @@
 <?php echo $header; ?>
-<div class="container">
-  <ul class="breadcrumb">
-    <?php foreach ($breadcrumbs as $breadcrumb) { ?>
-    <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
-    <?php } ?>
-  </ul>
+<div class="container-fluid">
   <div class="row"><?php echo $column_left; ?>
     <?php if ($column_left && $column_right) { ?>
     <?php $class = 'col-sm-6'; ?>
@@ -14,9 +9,8 @@
     <?php $class = 'col-sm-12'; ?>
     <?php } ?>
     <div id="content" class="<?php echo $class; ?>"><?php echo $content_top; ?>
-      <h1><?php echo $heading_title; ?></h1>
-      <h3><?php echo $text_location; ?></h3>
-      <div class="panel panel-default">
+      <h1 class="decorPlazaHeaderText">Контакты</h1>
+      <!--div class="panel panel-default">
         <div class="panel-body">
           <div class="row">
             <?php if ($image) { ?>
@@ -51,7 +45,55 @@
             </div>
           </div>
         </div>
-      </div>
+      </div-->
+      <div class="row">
+        <div class="col-sm-6">
+          <?php if ($geocode) { ?>
+            <div id="map_canvas"></div>
+          <?php } else echo "К сожалению, на данный момент карта недоступна." ?>
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-lg-1">
+                 <img class="contactsIcon" src="/image/catalog/adress.png">
+            </div>
+            <div class="col-lg-11">
+              <span class="headerText">Адрес:</span><br/>
+            <?php echo $address; ?>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1">
+              <img class="contactsIcon" src="/image/catalog/schedule.png">
+            </div>
+            <div class="col-lg-11">
+              <span class="headerText">График работы:</span><br/>
+              <?php echo $open; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1">
+              <img class="contactsIcon" src="/image/catalog/telephone.png">
+            </div>
+            <div class="col-lg-11">
+              <span class="headerText">Телефоны:</span><br/>
+              <?php echo $telephone; ?><br/>
+              <?php echo $telephone1; ?><br/>
+              <?php echo $telephone2; ?>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-1">
+              <img class="contactsIcon" src="/image/catalog/email.png">
+            </div>
+            <div class="col-lg-11">
+              <span class="headerText">Email:</span>
+              <?php echo $mail; ?><br/>
+              <span class="spanOriginalSpaces"><?php echo $comment; ?></span>
+            </div>
+          </div>
+        </div>
+        </div>
       <?php if ($locations) { ?>
       <h3><?php echo $text_store; ?></h3>
       <div class="panel-group" id="accordion">
@@ -100,45 +142,44 @@
         <?php } ?>
       </div>
       <?php } ?>
+        <hr class="contactHr">
       <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal">
-        <fieldset>
-          <legend><?php echo $text_contact; ?></legend>
-          <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-name"><?php echo $entry_name; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="name" value="<?php echo $name; ?>" id="input-name" class="form-control" />
-              <?php if ($error_name) { ?>
-              <div class="text-danger"><?php echo $error_name; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-email"><?php echo $entry_email; ?></label>
-            <div class="col-sm-10">
-              <input type="text" name="email" value="<?php echo $email; ?>" id="input-email" class="form-control" />
-              <?php if ($error_email) { ?>
-              <div class="text-danger"><?php echo $error_email; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <div class="form-group required">
-            <label class="col-sm-2 control-label" for="input-enquiry"><?php echo $entry_enquiry; ?></label>
-            <div class="col-sm-10">
-              <textarea name="enquiry" rows="10" id="input-enquiry" class="form-control"><?php echo $enquiry; ?></textarea>
-              <?php if ($error_enquiry) { ?>
-              <div class="text-danger"><?php echo $error_enquiry; ?></div>
-              <?php } ?>
-            </div>
-          </div>
-          <?php echo $captcha; ?>
+        <fieldset class="contactsFieldSet">
+          <span class="decorPlazaHeaderText">Свяжитесь с нами</span>
+            <div class="row">
+                <div class="col-sm-4">
+                  <span class="colorRed">*</span><span>Имя:</span><br/><br/>
+                    <input name="name" value="<?php echo $name; ?>" id="input-name">
+                    <div class="text-danger"><?php echo $error_name; ?></div>
+                </div>
+                <div class="col-sm-4">
+                    <span class="colorRed">*</span><span>Телефон:</span><br/><br/>
+                    <input name="phone" value="<?php echo $phone; ?>" id="input-phone">
+                    <div class="text-danger"><?php echo $error_phone; ?></div>
+                </div>
+                <div class="col-sm-4">
+                    <span>E-mail:</span><br/><br/>
+                    <input name="email" value="<?php echo $email; ?>" id="input-email">
+                </div>
+                </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <span>Тема сообщения:</span><br/><br/>
+                    <input name="enquiry" id="input-enquiry"><br/>
+                    <span class="colorRed necessaryFields">*Поля, обязательные для заполнения</span>
+                </div>
+                <div class="col-sm-4">
+                    <span class="colorRed">*</span><span>Код на картинке:</span><br/><br/>
+                    <?php echo $captcha?>
+                </div>
+</div>
+            <button class="callBackSend" type="submit" value="<?php echo $button_submit; ?>">
+              Отправить
+            </button>
         </fieldset>
-        <div class="buttons">
-          <div class="pull-right">
-            <input class="btn btn-primary" type="submit" value="<?php echo $button_submit; ?>" />
-          </div>
-        </div>
       </form>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?callback=initmap&key=AIzaSyC9GPIlyaW6iJ0jwHqcvmc2a2PuS7v-xWo"></script>
 <?php echo $footer; ?>

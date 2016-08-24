@@ -27,18 +27,6 @@ class ControllerInformationContact extends Controller {
 			$this->response->redirect($this->url->link('information/contact/success'));
 		}
 
-		$data['breadcrumbs'] = array();
-
-		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/home')
-		);
-
-		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('information/contact')
-		);
-
 		$data['heading_title'] = $this->language->get('heading_title');
 
 		$data['text_location'] = $this->language->get('text_location');
@@ -62,10 +50,10 @@ class ControllerInformationContact extends Controller {
 			$data['error_name'] = '';
 		}
 
-		if (isset($this->error['email'])) {
-			$data['error_email'] = $this->error['email'];
+		if (isset($this->error['phone'])) {
+			$data['error_phone'] = $this->error['phone'];
 		} else {
-			$data['error_email'] = '';
+			$data['error_phone'] = '';
 		}
 
 		if (isset($this->error['enquiry'])) {
@@ -88,12 +76,16 @@ class ControllerInformationContact extends Controller {
 
 		$data['store'] = $this->config->get('config_name');
 		$data['address'] = nl2br($this->config->get('config_address'));
+		$data['address'] = nl2br($this->config->get('config_address'));
 		$data['geocode'] = $this->config->get('config_geocode');
 		$data['geocode_hl'] = $this->config->get('config_language');
 		$data['telephone'] = $this->config->get('config_telephone');
+        $data['telephone1'] = $this->config->get('config_telephone1');
+        $data['telephone2'] = $this->config->get('config_telephone2');
 		$data['fax'] = $this->config->get('config_fax');
 		$data['open'] = nl2br($this->config->get('config_open'));
 		$data['comment'] = $this->config->get('config_comment');
+        $data['mail'] = $this->config->get('config_email');
 
 		$data['locations'] = array();
 
@@ -129,6 +121,12 @@ class ControllerInformationContact extends Controller {
 			$data['name'] = $this->customer->getFirstName();
 		}
 
+        if (isset($this->request->post['phone'])) {
+            $data['phone'] = $this->request->post['phone'];
+        } else {
+            $data['phone'] = '';
+        }
+
 		if (isset($this->request->post['email'])) {
 			$data['email'] = $this->request->post['email'];
 		} else {
@@ -141,7 +139,7 @@ class ControllerInformationContact extends Controller {
 			$data['enquiry'] = '';
 		}
 
-		// Captcha
+		 //Captcha
 		if ($this->config->get($this->config->get('config_captcha') . '_status') && in_array('contact', (array)$this->config->get('config_captcha_page'))) {
 			$data['captcha'] = $this->load->controller('captcha/' . $this->config->get('config_captcha'), $this->error);
 		} else {
@@ -167,8 +165,8 @@ class ControllerInformationContact extends Controller {
 			$this->error['name'] = $this->language->get('error_name');
 		}
 
-		if (!preg_match('/^[^\@]+@.*.[a-z]{2,15}$/i', $this->request->post['email'])) {
-			$this->error['email'] = $this->language->get('error_email');
+		if (!preg_match('/((8|\+7)-?)?\(?\d{3,5}\)?-?\d{1}-?\d{1}-?\d{1}-?\d{1}-?\d{1}((-?\d{1})?-?\d{1})?/', $this->request->post['phone'])) {
+			$this->error['phone'] = "Телефон введен некорректно.";
 		}
 
 		if ((utf8_strlen($this->request->post['enquiry']) < 10) || (utf8_strlen($this->request->post['enquiry']) > 3000)) {
@@ -191,18 +189,6 @@ class ControllerInformationContact extends Controller {
 		$this->load->language('information/contact');
 
 		$this->document->setTitle($this->language->get('heading_title'));
-
-		$data['breadcrumbs'] = array();
-
-		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/home')
-		);
-
-		$data['breadcrumbs'][] = array(
-			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('information/contact')
-		);
 
 		$data['heading_title'] = $this->language->get('heading_title');
 
